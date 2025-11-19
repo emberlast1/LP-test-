@@ -1,0 +1,29 @@
+.footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-block: 20px;
+  font-size: 12px;
+  bottom: 0;
+  height: 100px;
+
+  a {
+    color: $grey-color;
+    border-bottom: 1px transparent;
+
+    &:hover {
+      color: $white-color;
+      border-bottom: 1px solid $white_color;
+     }
+    }
+
+  &__rights {
+    color: $grey_color;
+  }
+
+  &__contacts {
+    position: absolute;
+    bottom: 20px;
+  }
+}

@@ -1,0 +1,148 @@
+.concerts {
+    padding: 40px 0;
+    color: $white_color;
+
+ h2 {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  background-color: $rows-color2;
+  height: 50px;
+  border-bottom: 1px solid $border-table;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 1440px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  @include on-phone {
+    overflow: hidden;
+  }
+}
+
+ table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th,
+td {
+    padding-left: 18px;
+    text-align: left;
+}
+
+thead tr {
+    background-color: $rows-color2;
+    color: $table-font-color;
+    font-weight: normal;
+    font-size: 16px;
+
+     th {
+      padding: 18px;
+     }
+}
+
+ tbody tr {
+    background-color: $rows-color;
+    border-bottom: 1px solid $border-table;
+    font-size: 17px;
+    height: 55px;
+}
+
+tbody tr:hover {
+    background-color: $border-table;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 40%;
+    font-weight: bold;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 15%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 25%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 20%;
+    text-align: right;
+}
+
+td:nth-child(4) {
+    padding-right: 20px;
+}
+
+@include on-phone {
+   h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+      display: block;
+      width: 100%;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 64%;
+        font-size: 10px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 25px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: $table-font-color;
+        font-size: 10px;
+    }
+
+    td:nth-child(4) {
+        text-align: center !important;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+}
+
+}

@@ -1,0 +1,111 @@
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: linear-gradient(to right, #1a1a1a, #2a2a2a);
+  color: white;
+  padding-bottom: 40px;
+
+  .form__inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    input {
+      padding: 12px;
+      border: 1px solid $border-table;
+      border-radius: 6px;
+      background-color: $rows-color2;
+      width: 100%;
+      margin-top: 10px;
+      box-sizing: border-box;
+    }
+
+    label {
+      color: $grey_color;
+    }
+  }
+
+  &__title {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    align-self: center;
+    font-size: 1.8rem;
+    margin-bottom: 1px;
+}
+
+    p {
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include on-phone {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+  }
+
+  &__form {
+    max-width: 450px;
+
+    @include on-phone {
+      max-width: 100%;
+    }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+textarea {
+  padding: 12px;
+  border: 1px solid $border-table;
+  border-radius: 6px;
+  background-color: $rows-color2;
+  color: $white_color;
+  font-size: 1rem;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+}
+  }
+
+  &__map {
+    background-color: $rows-color2;
+    padding: 15px;
+    width: 450px;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    @include on-phone {
+      width: 100%;
+    }
+
+    iframe {
+      border: none;
+      border-radius: 10px;
+    }
+
+  h3 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+  }
+}

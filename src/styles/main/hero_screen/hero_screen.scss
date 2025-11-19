@@ -1,0 +1,23 @@
+.hero_screen {
+  background-image: url(../images/back2.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  @include on-phone {
+    background-size: cover;
+  }
+
+  &__title {
+    font-size: 50px;
+
+    @include on-phone {
+      font-size: 30px;
+    }
+  }
+
+  &__description {
+    @include on-phone {
+      text-align: center;
+    }
+  }
+}
