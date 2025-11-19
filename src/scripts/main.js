@@ -16,21 +16,25 @@ document.addEventListener('DOMContentLoaded', () => {
       modalDate.textContent = date;
 
       modal.style.display = 'block';
+      document.body.classList.add('modal-open');
     });
   });
 
   closeButton.addEventListener('click', () => {
     modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
   });
 
   window.addEventListener('click', (event) => {
     if (event.target === modal) {
       modal.style.display = 'none';
+      document.body.classList.remove('modal-open');
     }
   });
 
   document.getElementById('ticketForm').addEventListener('submit', (event) => {
     event.preventDefault();
     modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
   });
 });

@@ -34,6 +34,10 @@ body {
   }
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   color: $white_color;
